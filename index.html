@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Absolute Sage — Change & Organisational Design Consultancy</title>
+<meta name="description" content="Absolute Sage is a boutique change, organisation design and development consultancy led by Angela Peter. Strategy that restructures organisations — and the people capability to make it stick.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F6F1EA; --paper:#FBF8F3; --brown:#8A6A4F; --brown-deep:#5C4433;
+  --tan:#C9B8A5; --green:#23413A; --green-deep:#1B322C; --gold:#B4884F;
+  --ink:#2E2A26; --muted:#6E6459;
+  --serif:'Fraunces',Georgia,serif; --sans:'Inter',-apple-system,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);
+  font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:var(--serif);font-weight:400;letter-spacing:-0.01em}
+.container{max-width:1180px;margin:0 auto;padding:0 32px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--brown)}
+a{color:inherit;text-decoration:none}
+section{padding:96px 0}
+.dark{background:var(--green);color:#EDE7DC}
+.darkest{background:var(--green-deep);color:#EDE7DC}
+.dark .eyebrow,.darkest .eyebrow{color:var(--tan)}
+.hair{border:none;height:1px;background:var(--tan);opacity:.35;margin:0}
+
+/* ── NAV ─────────────────────────── */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(246,241,234,.92);
+  backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,184,165,.5)}
+nav .container{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--green-deep)}
+.logo em{color:var(--brown);font-style:italic}
+.nav-links{display:flex;gap:34px;font-size:14px;font-weight:500;color:var(--muted)}
+.nav-links a:hover{color:var(--green-deep)}
+.nav-cta{font-size:13px;font-weight:600;color:var(--green-deep);border:1px solid var(--green-deep);
+  padding:10px 22px;border-radius:2px;transition:.2s}
+.nav-cta:hover{background:var(--green-deep);color:var(--cream)}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* ── HERO ────────────────────────── */
+.hero{padding:190px 0 120px;background:
+  radial-gradient(1200px 500px at 85% -10%, rgba(138,106,79,.14), transparent 60%),
+  radial-gradient(900px 420px at -10% 90%, rgba(35,65,58,.10), transparent 55%),var(--cream)}
+.hero h1{font-size:clamp(40px,6vw,64px);line-height:1.08;color:var(--green-deep);max-width:900px}
+.hero h1 em{color:var(--brown)}
+.hero p.lede{margin:28px 0 0;max-width:640px;font-size:19px;line-height:1.7;color:var(--muted)}
+.hero-row{display:flex;align-items:center;gap:40px;margin-top:44px;flex-wrap:wrap}
+.btn{display:inline-block;font-size:15px;font-weight:600;padding:16px 34px;border-radius:2px;transition:.2s}
+.btn-solid{background:var(--green-deep);color:var(--cream)}
+.btn-solid:hover{background:var(--brown-deep)}
+.btn-ghost{border:1px solid var(--tan);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--brown);color:var(--brown)}
+.hero-proof{font-size:13px;color:var(--muted);line-height:1.5}
+.hero-proof b{color:var(--green-deep)}
+
+/* ── STATS ───────────────────────── */
+.stats{background:var(--green-deep);padding:56px 0}
+.stats .container{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
+.stat b{display:block;font-family:var(--serif);font-size:38px;color:#EDE7DC;font-weight:500}
+.stat span{font-size:13px;color:var(--tan);letter-spacing:.04em;text-transform:uppercase}
+@media(max-width:760px){.stats .container{grid-template-columns:repeat(2,1fr)}}
+
+/* ── SECTION HEADS ───────────────── */
+.sec-head{max-width:720px;margin-bottom:64px}
+.sec-head h2{font-size:clamp(30px,4vw,42px);line-height:1.15;margin:14px 0 0;color:inherit}
+.dark h2,.darkest h2{color:#F1EBDF}
+.sec-head p{margin-top:18px;font-size:17px;color:var(--muted)}
+.dark .sec-head p{color:#CBBfa9}
+
+/* ── SERVICES ────────────────────── */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.svc{padding:44px 36px 52px;border-left:1px solid rgba(201,184,165,.4)}
+.svc:first-child{border-left:none}
+.svc .num{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--gold)}
+.svc h3{font-size:23px;margin:14px 0 12px;color:var(--green-deep)}
+.svc p{font-size:14.5px;color:var(--muted);line-height:1.7}
+.svc ul{list-style:none;margin-top:18px}
+.svc li{font-size:13.5px;color:var(--ink);padding:7px 0;border-bottom:1px dashed rgba(201,184,165,.5);display:flex;gap:10px}
+.svc li:last-child{border-bottom:none}
+.svc li::before{content:"—";color:var(--brown)}
+@media(max-width:860px){.svc-grid{grid-template-columns:1fr}.svc{border-left:none;border-top:1px solid rgba(201,184,165,.4)}.svc:first-child{border-top:none}}
+
+/* ── HOW (dark) ──────────────────── */
+.how-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:start}
+.how-steps{display:grid;gap:0}
+.how-step{display:grid;grid-template-columns:64px 1fr;gap:20px;padding:28px 0;border-top:1px solid rgba(201,184,165,.28)}
+.how-step:last-child{border-bottom:1px solid rgba(201,184,165,.28)}
+.how-step .n{font-family:var(--serif);font-size:34px;font-style:italic;color:var(--gold)}
+.how-step h3{font-size:21px;color:#F1EBDF;margin-bottom:6px}
+.how-step p{font-size:14.5px;color:#C8Bda8;line-height:1.65}
+.pull{font-family:var(--serif);font-style:italic;font-size:clamp(24px,3vw,34px);line-height:1.35;color:#F1EBDF;margin-top:26px}
+.pull small{display:block;margin-top:20px;font-family:var(--sans);font-style:normal;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--tan)}
+
+/* ── INDUSTRIES ──────────────────── */
+.ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.ind{background:var(--paper);border:1px solid rgba(201,184,165,.45);border-radius:3px;padding:30px 26px;transition:.2s}
+.ind:hover{border-color:var(--brown);transform:translateY(-2px)}
+.ind b{display:block;font-family:var(--serif);font-size:19px;color:var(--green-deep);font-weight:500}
+.ind span{display:block;font-size:13px;color:var(--muted);margin-top:8px;line-height:1.55}
+@media(max-width:860px){.ind-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ── TEAM ────────────────────────── */
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:8px}
+.person{background:var(--paper);border:1px solid rgba(201,184,165,.45);border-radius:3px;overflow:hidden}
+.person .portrait{height:340px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:30px 26px 26px;position:relative}
+.portrait.angela{background:linear-gradient(155deg,var(--green) 0%,var(--green-deep) 100%)}
+.portrait.grover{background:linear-gradient(155deg,var(--brown) 0%,var(--brown-deep) 100%)}
+.portrait .pic{width:150px;height:150px;border-radius:50%;object-fit:cover;object-position:center 30%;
+  border:3px solid rgba(246,241,234,.85);box-shadow:0 10px 28px rgba(0,0,0,.28);background:#fff;margin-bottom:18px}
+.portrait h3{font-size:26px;color:#F5EFE3;position:relative;text-align:center}
+.portrait .role{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tan);margin-top:4px;position:relative;text-align:center}
+.person .body{padding:26px 28px 30px}
+.person .body p{font-size:14.5px;color:var(--muted);line-height:1.7}
+.person .tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+.person .tags span{font-size:11.5px;font-weight:600;letter-spacing:.05em;color:var(--brown-deep);
+  border:1px solid var(--tan);border-radius:999px;padding:5px 12px}
+@media(max-width:860px){.team-grid{grid-template-columns:1fr}}
+
+/* ── PARTNER STRIP ───────────────── */
+.partner{padding:64px 0;border-top:1px solid rgba(201,184,165,.4)}
+.partner .container{display:flex;align-items:center;gap:48px;flex-wrap:wrap}
+.partner .badge{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);
+  border:1px solid var(--gold);border-radius:999px;padding:8px 16px;white-space:nowrap}
+.partner p{font-size:16px;color:var(--muted);max-width:820px;line-height:1.7}
+.partner b{color:var(--green-deep)}
+
+/* ── CONTACT ─────────────────────── */
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px}
+.contact-info .line{padding:20px 0;border-bottom:1px solid rgba(201,184,165,.28);font-size:15px;color:#D9D0BF}
+.contact-info .line b{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tan);margin-bottom:4px}
+.contact-info .line a:hover{color:var(--gold)}
+form{display:grid;gap:18px}
+label{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--tan)}
+input,textarea{width:100%;background:transparent;border:none;border-bottom:1px solid rgba(201,184,165,.5);
+  color:#F1EBDF;font-family:var(--sans);font-size:15px;padding:12px 2px;outline:none}
+input:focus,textarea:focus{border-bottom-color:var(--gold)}
+textarea{resize:vertical;min-height:90px}
+form .btn-solid{background:var(--gold);color:var(--green-deep);border:none;cursor:pointer;justify-self:start;margin-top:6px}
+form .btn-solid:hover{background:#C99C5E}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
+
+/* ── FOOTER ──────────────────────── */
+footer{background:var(--green-deep);padding:44px 0;border-top:1px solid rgba(201,184,165,.2)}
+footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+footer .logo{color:#EDE7DC}
+footer p{font-size:12.5px;color:#9C8F79}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a class="logo" href="#top">Absolute <em>Sage</em></a>
+    <div class="nav-links">
+      <a href="#services">What we do</a>
+      <a href="#how">How we work</a>
+      <a href="#industries">Who we serve</a>
+      <a href="#team">Team</a>
+    </div>
+    <a class="nav-cta" href="#contact">Start a conversation</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="container">
+    <p class="eyebrow">Boutique change &amp; organisation design consultancy</p>
+    <h1>Organisations that <em>restructure</em> beautifully —<br>and people who <em>move with them.</em></h1>
+    <p class="lede">Absolute Sage partners with leadership teams to redesign how organisations work — structure, operating model,
+    culture — and then does the patient, practical work of making the change stick. Founded and led by Angela Peter,
+    with decades of enterprise transformation from Accenture and beyond.</p>
+    <div class="hero-row">
+      <a class="btn btn-solid" href="#contact">Book an exploratory call</a>
+      <a class="btn btn-ghost" href="#services">Explore our services</a>
+      <p class="hero-proof"><b>20+ years</b> enterprise experience<br>Accenture-trained · South Africa &amp; Africa-wide</p>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="container">
+    <div class="stat"><b>20+</b><span>Years in transformation</span></div>
+    <div class="stat"><b>50+</b><span>Change programmes led</span></div>
+    <div class="stat"><b>4</b><span>Continents of delivery</span></div>
+    <div class="stat"><b>ADKAR</b><span>Certified practitioners</span></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">What we do</p>
+      <h2>Three disciplines. One continuous thread: from blueprint to behaviour.</h2>
+      <p>Most consultancies hand you a structure chart and leave. We stay until the organisation is actually operating differently —
+      because design without adoption is decoration.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc">
+        <span class="num">01</span>
+        <h3>Change Management</h3>
+        <p>Enterprise change programmes built on ADKAR and proven practice — from C-suite sponsorship to the frontline
+        supervisor who has to live with the new way of working.</p>
+        <ul>
+          <li>Change strategy &amp; impact assessment</li>
+          <li>Sponsorship roadmaps &amp; coalition building</li>
+          <li>Resistance management &amp; comms architecture</li>
+          <li>Adoption tracking &amp; benefits realisation</li>
+        </ul>
+      </div>
+      <div class="svc">
+        <span class="num">02</span>
+        <h3>Organisation Design &amp; Development</h3>
+        <p>Operating models, structures and ways of working engineered for the strategy you actually have — not the one on
+        the last slide deck. We design organisations the way good architects design buildings: for how people use them.</p>
+        <ul>
+          <li>Operating model &amp; structure design</li>
+          <li>Role, job &amp; workforce architecture</li>
+          <li>Culture diagnostics &amp; development roadmaps</li>
+          <li>Post-restructure stabilisation</li>
+        </ul>
+      </div>
+      <div class="svc">
+        <span class="num">03</span>
+        <h3>Capability &amp; Learning</h3>
+        <p>New organisations need new skills on day one. We build the training and capability programmes that turn
+        restructures into performance — and measure the difference.</p>
+        <ul>
+          <li>Capability frameworks &amp; learning pathways</li>
+          <li>Training design &amp; delivery</li>
+          <li>Digital adoption &amp; end-user enablement</li>
+          <li>Leadership &amp; manager upskilling</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="how">
+  <div class="container">
+    <div class="how-grid">
+      <div>
+        <p class="eyebrow">How we work</p>
+        <h2>The Sage Method<span style="color:var(--gold)">*</span></h2>
+        <p style="font-size:16.5px;color:#C8BDA8;margin-top:18px">A four-movement engagement rhythm — designed to be
+        run on its own or embedded inside your existing programme. Every phase ends with something you can use, not
+        just something to read.</p>
+        <p class="pull">“A restructure is a date on a calendar. Organisational change is what happens in the eighteen months after it.”<small>Angela Peter · Founder &amp; CEO</small></p>
+        <p style="font-size:12px;color:#9C8F79;margin-top:26px">* Method name illustrative — refine with Angela before launch.</p>
+      </div>
+      <div class="how-steps">
+        <div class="how-step"><span class="n">i</span><div><h3>Diagnose</h3>
+          <p>Stakeholder interviews, culture and readiness data, systems landscape. We map what is really true — not the official story.</p></div></div>
+        <div class="how-step"><span class="n">ii</span><div><h3>Design</h3>
+          <p>Operating model, structure, change strategy and comms architecture — built with your leadership, stress-tested against reality.</p></div></div>
+        <div class="how-step"><span class="n">iii</span><div><h3>Deliver</h3>
+          <p>Implementation support, training, sponsorship activation, resistance management. We run alongside your teams, not above them.</p></div></div>
+        <div class="how-step"><span class="n">iv</span><div><h3>Sustain</h3>
+          <p>Adoption analytics, capability transfer, and a measure of what stuck. We hand over the instruments so the change keeps working without us.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="industries">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">Who we serve</p>
+      <h2>Sectors where structure and people have to move together.</h2>
+    </div>
+    <div class="ind-grid">
+      <div class="ind"><b>Financial Services</b><span>Restructures, system implementations and operating-model shifts under regulatory scrutiny.</span></div>
+      <div class="ind"><b>Energy &amp; Resources</b><span>Multi-site workforce transformation where safety culture and change collide.</span></div>
+      <div class="ind"><b>Public &amp; Regulatory</b><span>Mandate-driven restructures needing both institutional buy-in and public accountability.</span></div>
+      <div class="ind"><b>Healthcare &amp; Life Sciences</b><span>Clinical system adoption and workforce redesign around the patient, not the platform.</span></div>
+      <div class="ind"><b>Media &amp; Telecoms</b><span>Digital-era org redesign for industries rewriting their own business models.</span></div>
+      <div class="ind"><b>Retail &amp; FMCG</b><span>Pan-African rollouts where every store is a change event.</span></div>
+      <div class="ind"><b>Manufacturing</b><span>Lean transformations that respect the people running the line.</span></div>
+      <div class="ind"><b>Professional Services</b><span>Partnership structures, capability build and succession architecture.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="team" style="background:var(--paper)">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">The practice</p>
+      <h2>Small by design. Senior on every engagement.</h2>
+      <p>When you hire Absolute Sage, you get the principals — not a junior team dressed up as one.</p>
+    </div>
+    <div class="team-grid">
+      <div class="person">
+        <div class="portrait angela"><img class="pic" src="assets/angela.jpg" alt="Angela Peter">
+          <div><h3>Angela Peter</h3><div class="role">Founder &amp; CEO</div></div>
+        </div>
+        <div class="body">
+          <p>Two decades leading change and organisation design for enterprise clients, most recently as a senior
+          transformation practitioner at <b>Accenture</b>. Angela has architected restructures, operating models and
+          people strategies across energy, financial services, media and the public sector — and built a reputation
+          for staying until the change holds. She is an ADKAR-certified change practitioner and the reason Absolute
+          Sage exists: boutique attention at enterprise scale.</p>
+          <div class="tags"><span>Organisation Design</span><span>Change Strategy</span><span>ADKAR</span><span>Ex-Accenture</span></div>
+        </div>
+      </div>
+      <div class="person">
+        <div class="portrait grover"><img class="pic" src="assets/grover.jpg" alt="Grover Abrahams">
+          <div><h3>Grover Abrahams</h3><div class="role">Head of Technology</div></div>
+        </div>
+        <div class="body">
+          <p>Founder &amp; CEO of Verve Digital and Absolute Sage's Head of Technology. Grover leads the systems side of
+          every engagement — data modelling, platform build, implementation support and the analytics that prove a
+          change actually happened. Previously change and training capability lead at <b>Accenture</b> and
+          <b>Deloitte</b>, with enterprise programmes delivered for Sasol, MultiChoice and SA corporates. Where
+          Angela designs the organisation, Grover builds what it runs on.</p>
+          <div class="tags"><span>Systems Implementation</span><span>Platform &amp; Data</span><span>Digital Adoption</span><span>ADKAR</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="partner">
+  <div class="container">
+    <span class="badge">Technical Partner</span>
+    <p>Absolute Sage builds and transforms organisations in partnership with <b>Verve Digital</b> — the systems,
+    platform and implementation engine behind our larger engagements. Custom platforms, HRIS and LMS implementations,
+    data dashboards and digital adoption tooling: when the organisation design needs technology to carry it, the
+    capability is in-house.</p>
+  </div>
+</div>
+
+<section class="darkest" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p class="eyebrow">Start a conversation</p>
+        <h2 style="margin-top:14px">Tell us what's changing.</h2>
+        <p style="font-size:16px;color:#C8BDA8;margin:22px 0 36px;line-height:1.7;max-width:420px">
+          Exploratory calls are free and without obligation — most engagements start as a conversation about whether
+          we're even the right partner.</p>
+        <div class="line"><b>Email</b><a href="mailto:hello@absolutesage.co.za">hello@absolutesage.co.za</a></div>
+        <div class="line"><b>Response</b>Within one business day</div>
+        <div class="line"><b>Based</b>Johannesburg, South Africa · operating Africa-wide</div>
+      </div>
+      <form onsubmit="return sendMsg(event)">
+        <div><label for="fn">Name</label><input id="fn" name="name" required placeholder="Your full name"></div>
+        <div><label for="fe">Work email</label><input id="fe" name="email" type="email" required placeholder="you@company.co.za"></div>
+        <div><label for="fc">Company</label><input id="fc" name="company" placeholder="Organisation name"></div>
+        <div><label for="fm">What's changing?</label><textarea id="fm" name="message" placeholder="Restructure, system implementation, culture shift…"></textarea></div>
+        <button class="btn btn-solid" type="submit">Send enquiry</button>
+        <p id="fmsg" style="font-size:13px;color:var(--gold);display:none">Thank you — we'll be in touch within one business day. (Form is a demo state; wire to your inbox on launch.)</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <a class="logo" href="#top">Absolute <em>Sage</em></a>
+    <p>© 2026 Absolute Sage · Change &amp; Organisation Design Consultancy · Johannesburg</p>
+    <p>hello@absolutesage.co.za</p>
+  </div>
+</footer>
+
+<script>
+function sendMsg(e){e.preventDefault();document.getElementById('fmsg').style.display='block';return false;}
+</script>
+</body>
+</html>
